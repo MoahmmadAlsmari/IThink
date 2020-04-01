@@ -34,7 +34,7 @@ def index(request):
         os.path.dirname(os.path.realpath(__file__)).replace("\\", "/"))
     ###########################
     #for deleting the media files before start#
-    filemedia = base_dir + '/media'
+    filemedia = base_dir + "/media"
     folder = filemedia
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)

@@ -1,0 +1,74 @@
+{% block content %}
+<html>
+
+<head>
+    {% load static %}
+    <title></title>
+    <link rel="stylesheet" href="{% static '/buttonProject/style.css' %}" />
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/upload">Application</a></li>
+    </ul>
+    <main>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="myfile" /><br>
+            <button type="submit">Upload</button><br>
+        </form>
+        <table>
+            <tr>
+                <td>
+                    <p3 id="std">std: </p3>
+                </td>
+                <td>
+                    <p3 id="median">median:</p3>
+                </td>
+                <td>
+                    <p3 id="mean">mean:</p3>
+                </td>
+            </tr>
+            <tr>
+                <td><button id="show" onclick="show()">show result</button></td>
+            </tr>
+            <td>
+                <td>
+                    <div>
+                        <img id='monte' height=" 300px" onerror="imgError()">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img id='linear' height=" 300px">
+                    </div>
+                </td>
+                </tr>
+        </table>
+        {% endblock %}
+
+
+    </main>
+
+</body>
+<script>
+    function show() {
+        var median = "{{median}}"
+        var mean = "{{mean}}"
+        var std = "{{std}}"
+        document.getElementById('monte').src = "{% static '/buttonProject/monte.png'%}"
+        document.getElementById('linear').src = "{% static '/buttonProject/linear.png'%}"
+        document.getElementById('std').innerHTML = std;
+        document.getElementById('median').innerHTML = median;
+        document.getElementById('mean').innerHTML = mean;
+
+
+    }
+
+    function imgError() {
+        alert('First select file');
+    }
+</script>
+
+</html>

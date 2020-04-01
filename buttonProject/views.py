@@ -43,7 +43,7 @@ def index(request):
                 os.unlink(file_path)
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path)
-        except Exceptionss as e:
+        except Exception  as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
     ###########################

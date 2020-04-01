@@ -24,9 +24,7 @@ SECRET_KEY = '3a%$s^!*kxb5=%qhd&=5y$zvbhiv=$#pzt+xgmjtp02f=k2bar'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'ithinkproject.herokuapp.com'
-]
+ALLOWED_HOSTS = ['104.214.104.225','*']
 
 # Application definition
 

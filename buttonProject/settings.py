@@ -25,7 +25,7 @@ SECRET_KEY = '3a%$s^!*kxb5=%qhd&=5y$zvbhiv=$#pzt+xgmjtp02f=k2bar'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ithinkproject.herokuapp.com
+    'ithinkproject.herokuapp.com'
 ]
 
 # Application definition

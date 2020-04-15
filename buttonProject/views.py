@@ -32,10 +32,9 @@ def index(request):
 
     base_dir = os.path.dirname(
         os.path.dirname(os.path.realpath(__file__)).replace("\\", "/"))
-  
 
     ###########################
-    #reading the file
+    # reading the file
     if request.method == 'POST':
         uploaded_file = request.FILES['myfile']
         fs = FileSystemStorage()
@@ -198,8 +197,8 @@ def index(request):
         fitted_values = model_fit.fittedvalues
         plt.scatter(weight, CountArrTest)
         plt.plot(weight, fitted_values, c='r')
-        plt.xlabel("weight")
-        plt.ylabel("CountArrTest")
+        plt.xlabel("Grades")
+        plt.ylabel("Number of students")
         plt.savefig(imagePathLin)
         print(model_fit.summary())
         #########################

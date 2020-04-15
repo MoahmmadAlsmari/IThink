@@ -57,7 +57,7 @@
                 <div class="row align-items-center">
 
                     <div class="col-6 col-md-3 col-xl-4  d-block">
-                        <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">IThink<span class="text-primary">.</span> </a></h1>
+                        <h1 class="mb-0 site-logo"><a href="/" class="text-black h2 mb-0">IThink<span class="text-primary">.</span> </a></h1>
                     </div>
 
                     <div class="col-12 col-md-9 col-xl-8 main-menu">
@@ -69,16 +69,7 @@
                                 <li class="has-children">
                                     <a href="#about-section" class="nav-link">About Us</a>
                                     <ul class="dropdown arrow-top">
-                                        <li><a href="#" target="_blank" class="nav-link"><span class="text-primary">More Free Templates</span></a></li>
                                         <li><a href="#our-team-section" class="nav-link">Our Team</a></li>
-                                        <li class="has-children">
-                                            <a href="#">More Links</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Menu One</a></li>
-                                                <li><a href="#">Menu Two</a></li>
-                                                <li><a href="#">Menu Three</a></li>
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </li>
                                 <li><a href="#testimonials-section" class="nav-link">Acknowledgment</a></li>
@@ -127,24 +118,21 @@
             <div class="container">
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <input type="file" name="myfile" /><br>
-
-                    <button type="submit" class="btn btn-primary mr-2 mb-2">Upload</button><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="file" name="myfile" style="margin-left: 126.5;" class="btn btn-primary mr-2 mb-2" />
+                            </td>
+                            <td>
+                                <button type="submit" style=" margin-right: 126.5;" class="btn btn-primary mr-2 mb-2">Upload</button>
+                            </td>
+                        </tr>
+                    </table>
                 </form>
+                <br><br>
                 <table>
                     <tr>
-                        <td>
-                            <p3 id="std">std: </p3>
-                        </td>
-                        <td>
-                            <p3 id="median">median:</p3>
-                        </td>
-                        <td>
-                            <p3 id="mean">mean:</p3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><button id="show" onclick="show()">show result</button></td>
+                        <td><button id="show" onclick="show()" class="btn btn-primary mr-2 mb-2">show result</button></td>
                     </tr>
                     <td>
                         <td>

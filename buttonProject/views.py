@@ -200,12 +200,15 @@ def index(request):
         plt.xlabel("Grades")
         plt.ylabel("Number of students")
         plt.savefig(imagePathLin)
-        print(model_fit.summary())
+        # print(model_fit.summary())
         #########################
+        mean = "{:.4f}".format(np.mean(gpa))
+        median = "{:.4f}".format(np.median(gpa))
+        std = "{:.4f}".format(np.std(gpa))
 
-        mean = np.mean(gpa)
-        median = np.median(gpa)
-        std = np.std(gpa)
+        print("mean of gpa : ", np.mean(gpa))
+        print("mean of median : ", np.median(gpa))
+        print("mean of Standard deviation : ", np.std(gpa))
 
     return render(request, 'index.html', {
         'mean': mean,
